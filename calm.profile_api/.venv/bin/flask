@@ -1,4 +1,4 @@
-#!/Users/studio-ai/calm.profile_api/.venv/bin/python
+#!/Users/studio-ai/calm/calm.profile_api/.venv/bin/python3.13
 import sys
 from flask.cli import main
 if __name__ == '__main__':
