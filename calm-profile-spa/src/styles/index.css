@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@200;300;400;500&display=swap');
+@import "./tokens.css";
+
+/* base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* accessibility helpers */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 1px, 1px);
+  white-space: nowrap; border: 0;
+}
+
+/* typography */
+h1, h2, h3, p {
+  margin: 0 0 var(--space-16);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+p, label, input, button, small {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+small, .micro {
+  font-size: var(--fs-micro);
+  line-height: var(--lh-micro);
+  color: rgba(var(--color-ink-rgb), 0.75);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* layout containers */
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--container-pad-desktop);
+  padding-right: var(--container-pad-desktop);
+  max-width: var(--container-max-desktop);
+}
+
+@media (max-width: 1024px) {
+  .wrap { max-width: var(--container-max-tablet); }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding-left: var(--container-pad-tablet);
+    padding-right: var(--container-pad-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding-left: var(--container-pad-mobile);
+    padding-right: var(--container-pad-mobile);
+  }
+}
+
+/* cards */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-1);
+}
+
+/* buttons */
+.btn {
+  --_bg: var(--color-ink);
+  --_fg: var(--color-surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: 0.75rem 1rem;
+  min-height: 44px; /* ≥16px tap target, practical ≥44px */
+  border-radius: var(--radius-button);
+  border: 1px solid transparent;
+  background: var(--_bg);
+  color: var(--_fg);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  font-family: var(--font-mono); /* mono for ctas */
+  text-transform: lowercase;
+  transition: transform var(--dur-1) var(--ease-standard), box-shadow var(--dur-1) var(--ease-standard), opacity var(--dur-1) var(--ease-standard);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-2);
+}
+
+.btn:active { transform: translateY(0); }
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-outline {
+  --_bg: transparent;
+  --_fg: var(--color-ink);
+  border-color: var(--color-gray-300);
+}
+
+.btn-ghost {
+  --_bg: transparent;
+  --_fg: var(--color-ink);
+  border-color: transparent;
+}
+
+/* focus states — subtle teal ring only */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: calc(var(--radius-button) - 2px);
+}
+
+/* brand wordmark */
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+
+.wordmark .i-dotless { font-feature-settings: "case" 0; }
+
+.wordmark .dot {
+  display: inline-block;
+  width: 0.5ch;
+  transform: translateX(-0.1ch);
+  color: var(--color-teal); /* tiny accent usage */
+}
+
+/* title accent dot */
+.title-accent {
+  position: relative;
+  padding-left: calc(var(--space-12) + 6px);
+}
+
+.title-accent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-teal); /* tiny accent usage */
+}
+
+/* utilities */
+.stack-8 > * + * { margin-top: var(--space-8); }
+.stack-12 > * + * { margin-top: var(--space-12); }
+.stack-16 > * + * { margin-top: var(--space-16); }
+.stack-24 > * + * { margin-top: var(--space-24); }
+.stack-32 > * + * { margin-top: var(--space-32); }
+.stack-48 > * + * { margin-top: var(--space-48); }
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+/* motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

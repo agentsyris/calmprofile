@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>calm.profile — thank you | syrıs.</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <meta name="description" content="payment confirmed. schedule your calm.profile debrief."/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --teal:#00c9a7;--black:#000;--white:#fff;--gray-50:#fafafa;--gray-100:#f0f0f0;--gray-200:#e5e5e5;--gray-400:#999;--gray-600:#666;--max:720px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}
+    body{font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--black);background:var(--white);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .mono{font-family:'JetBrains Mono',monospace}
+    .wrap{max-width:var(--max);margin:0 auto;padding:32px 24px 64px}
+    nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-100);z-index:10}
+    .navin{max-width:var(--max);margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-family:'JetBrains Mono',monospace;font-size:16px;letter-spacing:-.02em;text-decoration:none;color:var(--black)}
+    .dot{color:var(--teal)}
+    h1{font-family:'JetBrains Mono',monospace;font-weight:400;font-size:28px;letter-spacing:-.02em;margin:6px 0 10px}
+    p.lead{color:var(--gray-600);margin-bottom:20px;line-height:1.7}
+    .card{border:1px solid var(--gray-100);border-radius:6px;padding:20px;margin:18px 0 26px;position:relative;background:var(--white)}
+    .card:before{content:"";position:absolute;left:0;top:0;height:100%;width:3px;background:var(--teal);opacity:.8;border-radius:6px 0 0 6px}
+    .ok{display:inline-flex;align-items:center;gap:10px;font-size:14px;color:var(--black)}
+    .ok .check{width:18px;height:18px;border-radius:50%;border:1px solid var(--black);display:inline-block;position:relative}
+    .ok .check:after{content:"";position:absolute;left:4px;top:1px;width:8px;height:12px;border-right:2px solid var(--black);border-bottom:2px solid var(--black);transform:rotate(45deg)}
+    .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+    .kv{border:1px solid var(--gray-100);border-radius:6px;padding:12px;text-align:center}
+    .k{font-size:10px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase}
+    .v{font-family:'JetBrains Mono',monospace;font-size:18px;margin-top:2px}
+    .section-title{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;color:var(--gray-600);text-transform:uppercase;margin:26px 0 10px}
+    .help{font-size:12px;color:var(--gray-600);margin-top:10px}
+    .btn{font-family:'JetBrains Mono',monospace;padding:11px 20px;border:1px solid var(--black);background:var(--black);color:var(--white);border-radius:4px;font-size:12px;letter-spacing:.02em;text-decoration:none;display:inline-block}
+    .btn:hover{background:var(--white);color:var(--black)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}.row .btn{flex:1 1 180px;text-align:center}
+    .cal-wrap{border:1px solid var(--gray-100);border-radius:6px;overflow:hidden}
+    footer{margin-top:40px;padding-top:24px;border-top:1px solid var(--gray-100);text-align:center;color:var(--gray-400);font-size:11px}
+    @media (max-width:720px){ .meta{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <nav><div class="navin"><a class="logo" href="/">syrıs<span class="dot">.</span></a></div></nav>
+  <main class="wrap" role="main">
+    <header aria-live="polite">
+      <h1>thank you<span class="dot">.</span></h1>
+      <p class="lead">payment confirmed. next step: schedule your 30-minute debrief.</p>
+    </header>
+    <section class="card" aria-labelledby="order">
+      <div class="ok"><span class="check" aria-hidden="true"></span><span id="order" class="mono">order received</span></div>
+      <div class="meta" aria-describedby="summary">
+        <div class="kv" aria-label="product"><div class="k">product</div><div class="v">calm.profile</div></div>
+        <div class="kv" aria-label="status"><div class="k">status</div><div class="v">paid</div></div>
+        <div class="kv" aria-label="reference"><div class="k">reference</div><div id="ref" class="v">—</div></div>
+      </div>
+      <p class="help" id="summary">your receipt has been emailed. keep the reference for your records.</p>
+      <div class="row" style="margin-top:14px">
+        <a class="btn" href="/" aria-label="back to home">back to site →</a>
+        <button class="btn" type="button" onclick="window.print()" aria-label="print confirmation">print</button>
+      </div>
+    </section>
+    <h2 class="section-title">schedule your debrief</h2>
+    <div class="cal-wrap" role="region" aria-label="calendly scheduler">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/syris/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px"></div>
+    </div>
+    <p class="help">if the scheduler doesn’t load, <a href="https://calendly.com/syris/30min" target="_blank" rel="noopener">open calendly in a new tab</a>.</p>
+    <h2 class="section-title">need help?</h2>
+    <p class="help">questions or issues: <a href="mailto:hello@syris.systems">hello@syris.systems</a></p>
+    <footer>© <span id="y"></span> syrıs<span class="dot">.</span> all rights reserved.</footer>
+  </main>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear()
+    const qp = new URLSearchParams(window.location.search)
+    const sid = qp.get('session_id') || qp.get('sessionId') || ''
+    if (sid) { const short = sid.slice(-8); document.getElementById('ref').textContent = '#' + short }
+    try {
+      window.plausible && window.plausible('checkout_success', { props:{ product:'calm.profile', page:'thank_you' } })
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({ event:'checkout_success', product:'calm.profile', page:'thank_you' })
+    } catch(e) {}
+  </script>
+</body>
+</html>
