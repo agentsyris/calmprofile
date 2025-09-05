@@ -1,0 +1,22 @@
+export const questions = [
+  { axis:"structure", context:"starting a new project", statement:"when starting a new project, i typically:", optionA:"create a structured plan with clear phases", optionB:"jump in and adapt as needed" },
+  { axis:"structure", context:"weekly planning", statement:"at the start of each week, i:", optionA:"lay out a clear plan for tasks and priorities", optionB:"tackle things as they arise day-by-day" },
+  { axis:"structure", context:"team processes", statement:"when defining how the team works, i prefer to:", optionA:"implement clear, step-by-step processes", optionB:"keep things flexible and case-by-case" },
+  { axis:"structure", context:"project tracking", statement:"to keep projects on track, i rely on:", optionA:"structured tools and checklists", optionB:"informal check-ins and on-the-fly adjustments" },
+  { axis:"structure", context:"course correction", statement:"if a project goes off track, i:", optionA:"stick to the original plan to correct it", optionB:"pivot and adjust the plan as needed" },
+  { axis:"collaboration", context:"team input", statement:"if i need input from my team, i usually:", optionA:"call a quick meeting or video chat", optionB:"send a message and wait for a reply" },
+  { axis:"collaboration", context:"daily updates", statement:"for daily updates, i prefer:", optionA:"a live team check-in or standup", optionB:"written updates everyone reads on their own" },
+  { axis:"collaboration", context:"task instructions", statement:"when giving task instructions, i typically:", optionA:"explain it in person or on a call", optionB:"write it out so they can review when ready" },
+  { axis:"collaboration", context:"complex issues", statement:"to address a complex issue, i:", optionA:"schedule a real-time discussion", optionB:"provide detailed thoughts via written comms" },
+  { axis:"collaboration", context:"coordination style", statement:"my coordination style is:", optionA:"mostly live conversations with the team", optionB:"mostly written communication" },
+  { axis:"scope", context:"project planning", statement:"when planning a project, i focus more on:", optionA:"the big-picture goals and outcomes", optionB:"the specific deliverables and details" },
+  { axis:"scope", context:"managing work", statement:"in managing work, i tend to:", optionA:"emphasize overall progress toward goals", optionB:"dive into the details of each task" },
+  { axis:"scope", context:"reviewing work", statement:"when reviewing my team's work, i pay more attention to:", optionA:"how it aligns with broader objectives", optionB:"the fine details and correctness" },
+  { axis:"scope", context:"leadership approach", statement:"my leadership approach is more about:", optionA:"setting the vision and high-level direction", optionB:"managing the details and day-to-day execution" },
+  { axis:"scope", context:"known for", statement:"people know me for:", optionA:"my big-picture vision", optionB:"my attention to detail" },
+  { axis:"tempo", context:"deadlines", statement:"as a deadline approaches, i:", optionA:"push to deliver quickly and hit the goal", optionB:"take extra time to ensure everything is perfect" },
+  { axis:"tempo", context:"work pace", statement:"my work pace is generally:", optionA:"fast and action-oriented", optionB:"steady and methodical" },
+  { axis:"tempo", context:"decision making", statement:"when making decisions, i usually:", optionA:"decide quickly to keep things moving", optionB:"take time to deliberate before acting" },
+  { axis:"tempo", context:"under pressure", statement:"under pressure, i tend to:", optionA:"accelerate and move even faster", optionB:"slow down to think things through" },
+  { axis:"tempo", context:"priorities", statement:"overall, i prioritize:", optionA:"rapid results and momentum", optionB:"careful execution, even if it's slower" }
+]

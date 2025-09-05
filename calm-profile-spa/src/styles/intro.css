@@ -1,0 +1,48 @@
+@import "./tokens.css";
+
+/* intro page */
+.intro-page {
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, var(--color-surface), transparent 60%),
+    radial-gradient(1200px 800px at 100% 0%, var(--color-gray-100), transparent 55%),
+    var(--color-page);
+  display: grid;
+  place-items: center;
+  padding: var(--space-32) var(--container-pad-desktop);
+}
+
+.intro-card {
+  max-width: 640px;
+  width: 100%;
+  padding: var(--space-32);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-2);
+}
+
+.intro-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-24);
+}
+
+.intro-brand .wordmark {
+  font-size: 1.125rem;
+}
+
+.intro-body p {
+  color: rgba(var(--color-ink-rgb), 0.8);
+}
+
+.intro-actions {
+  margin-top: var(--space-24);
+  display: flex;
+  gap: var(--space-12);
+}
+
+@media (max-width: 480px) {
+  .intro-card { padding: var(--space-24); }
+}
