@@ -1,0 +1,141 @@
+@import "./tokens.css";
+
+/* assessment layout */
+.assessment {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.assessment header,
+.assessment main,
+.assessment footer {
+  padding-block: var(--space-16);
+}
+
+.assessment header .wrap {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+}
+
+/* progress bar */
+.progress {
+  position: relative;
+  height: var(--progress-height);
+  background: var(--color-gray-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--color-teal); /* teal usage allowed */
+  transition: width var(--dur-1) var(--ease-standard);
+}
+
+/* discreet dots (20) */
+.progress-dots {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+  list-style: none;
+  padding: 0;
+}
+
+.progress-dots li {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-gray-300);
+}
+
+.progress-dots li[aria-current="step"] {
+  background: var(--color-ink);
+}
+
+/* prompt block */
+.prompt {
+  margin-top: var(--space-24);
+  padding: var(--space-24);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.prompt .sublabel {
+  margin-top: var(--space-8);
+  color: rgba(var(--color-ink-rgb), 0.7);
+}
+
+/* options grid (equal width) */
+.options {
+  margin-top: var(--space-24);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-16);
+}
+
+.option {
+  display: block;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  padding: var(--space-24);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--dur-1) var(--ease-standard), box-shadow var(--dur-1) var(--ease-standard), border-color var(--dur-1) var(--ease-standard);
+}
+
+.option:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-2);
+}
+
+.option:focus-visible {
+  box-shadow: var(--focus-ring), var(--shadow-1);
+}
+
+.option[aria-pressed="true"],
+.option.is-selected {
+  border-color: var(--color-ink);
+  box-shadow: var(--shadow-1);
+}
+
+@media (max-width: 640px) {
+  .options { grid-template-columns: 1fr; }
+}
+
+/* nav */
+.assessment .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-32);
+}
+
+.assessment .nav .meta {
+  font-family: var(--font-mono);
+  color: rgba(var(--color-ink-rgb), 0.7);
+}
+
+/* transitions for question change */
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--dur-1) var(--ease-standard), transform var(--dur-1) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-slide-enter,
+  .fade-slide-enter-active {
+    opacity: 1;
+    transform: none;
+  }
+}

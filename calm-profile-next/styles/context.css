@@ -1,0 +1,180 @@
+/* Context page - syris branded styling */
+.syris-context {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
+  padding: 48px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.syris-context-container {
+  max-width: 560px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.syris-context-card {
+  background: #FFFFFF;
+  padding: 56px 48px;
+  box-shadow: 
+    0 1px 3px rgba(10, 10, 10, 0.03),
+    0 10px 40px -10px rgba(0, 201, 167, 0.08);
+  position: relative;
+}
+
+.syris-context-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00C9A7, #00A88A);
+  opacity: 0.6;
+}
+
+.syris-context-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.syris-context-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #0A0A0A;
+  margin: 0 0 8px 0;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+}
+
+.syris-dot {
+  color: #00C9A7;
+}
+
+.syris-context-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #595959;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.syris-error {
+  background: rgba(255, 0, 0, 0.05);
+  color: #CC0000;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+
+.syris-form {
+  margin-top: 32px;
+}
+
+.syris-form-group {
+  margin-bottom: 32px;
+}
+
+.syris-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #404040;
+  margin-bottom: 12px;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
+}
+
+.syris-select {
+  width: 100%;
+  padding: 14px 16px;
+  background: #FAFAFA;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #0A0A0A;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.syris-select:focus {
+  outline: none;
+  border-color: #00C9A7;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.08);
+}
+
+.syris-submit {
+  width: 100%;
+  padding: 18px;
+  background: #0A0A0A;
+  color: #FFFFFF;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.syris-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #00C9A7;
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.syris-submit:hover:not(:disabled) {
+  color: #0A0A0A;
+}
+
+.syris-submit:hover:not(:disabled)::before {
+  left: 0;
+}
+
+.syris-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.syris-submit span {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .syris-context-card {
+    padding: 32px 24px;
+  }
+}
