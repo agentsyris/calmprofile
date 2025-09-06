@@ -1,44 +1,59 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { submitAssessment } from "../api";
 
 const AssessmentContext = ({ responses, onComplete }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [context, setContext] = useState({
-    teamSize: '',
-    meetingLoad: '',
-    hourlyRate: '',
-    platform: ''
+    teamSize: "",
+    meetingLoad: "",
+    hourlyRate: "",
+    platform: "",
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!context.teamSize || !context.meetingLoad || !context.hourlyRate) return;
-    
+    if (!context.teamSize || !context.meetingLoad || !context.hourlyRate)
+      return;
+
     setLoading(true);
+    setError(null);
+
     try {
       const result = await submitAssessment({ responses, context });
       onComplete(result);
-      navigate('/results');
+      navigate("/results");
     } catch (error) {
-      console.error('submission error:', error);
+      console.error("submission error:", error);
+      setError(
+        error.response?.data?.error ||
+          "Failed to submit assessment. Please try again."
+      );
       setLoading(false);
     }
+  };
+
+  const handleRetry = () => {
+    setError(null);
+    setLoading(false);
   };
 
   return (
     <div className="context-container">
       <div className="context-card">
         <h2 className="context-title">context calibration</h2>
-        
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label">team size</label>
-            <select 
+            <select
               className="form-select"
               value={context.teamSize}
-              onChange={(e) => setContext({...context, teamSize: e.target.value})}
+              onChange={(e) =>
+                setContext({ ...context, teamSize: e.target.value })
+              }
               required
             >
               <option value="">select...</option>
@@ -52,10 +67,12 @@ const AssessmentContext = ({ responses, onComplete }) => {
 
           <div className="form-group">
             <label className="form-label">meeting density</label>
-            <select 
+            <select
               className="form-select"
               value={context.meetingLoad}
-              onChange={(e) => setContext({...context, meetingLoad: e.target.value})}
+              onChange={(e) =>
+                setContext({ ...context, meetingLoad: e.target.value })
+              }
               required
             >
               <option value="">select...</option>
@@ -67,10 +84,12 @@ const AssessmentContext = ({ responses, onComplete }) => {
 
           <div className="form-group">
             <label className="form-label">hourly rate ($)</label>
-            <select 
+            <select
               className="form-select"
               value={context.hourlyRate}
-              onChange={(e) => setContext({...context, hourlyRate: e.target.value})}
+              onChange={(e) =>
+                setContext({ ...context, hourlyRate: e.target.value })
+              }
               required
             >
               <option value="">select...</option>
@@ -85,10 +104,12 @@ const AssessmentContext = ({ responses, onComplete }) => {
 
           <div className="form-group">
             <label className="form-label">primary platform</label>
-            <select 
+            <select
               className="form-select"
               value={context.platform}
-              onChange={(e) => setContext({...context, platform: e.target.value})}
+              onChange={(e) =>
+                setContext({ ...context, platform: e.target.value })
+              }
               required
             >
               <option value="">select...</option>
@@ -99,12 +120,30 @@ const AssessmentContext = ({ responses, onComplete }) => {
             </select>
           </div>
 
-          <button 
-            type="submit" 
+          {error && (
+            <div className="error-message">
+              <p>{error}</p>
+              <button
+                type="button"
+                className="retry-button"
+                onClick={handleRetry}
+              >
+                Try Again
+              </button>
+            </div>
+          )}
+
+          <button
+            type="submit"
             className="submit-button"
-            disabled={loading || !context.teamSize || !context.meetingLoad || !context.hourlyRate}
+            disabled={
+              loading ||
+              !context.teamSize ||
+              !context.meetingLoad ||
+              !context.hourlyRate
+            }
           >
-            {loading ? 'calculating...' : 'calculate roi'}
+            {loading ? "calculating..." : "calculate roi"}
           </button>
         </form>
       </div>

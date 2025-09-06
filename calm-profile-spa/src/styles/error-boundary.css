@@ -1,0 +1,122 @@
+/* Error Boundary Styles */
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-page);
+  padding: var(--space-lg);
+}
+
+.error-container {
+  max-width: 500px;
+  text-align: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.error-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-semibold);
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+
+.error-message {
+  font-size: var(--fs-body);
+  color: var(--color-ink-muted);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-lg);
+}
+
+.error-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-retry-btn,
+.error-home-btn {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-retry-btn {
+  background: var(--syris-teal);
+  color: var(--white);
+}
+
+.error-retry-btn:hover {
+  background: var(--syris-teal-dark);
+  transform: translateY(-1px);
+}
+
+.error-home-btn {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+}
+
+.error-home-btn:hover {
+  background: var(--color-surface-hover);
+  transform: translateY(-1px);
+}
+
+.error-details {
+  margin-top: var(--space-lg);
+  text-align: left;
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: var(--fw-medium);
+  color: var(--color-ink);
+  margin-bottom: var(--space-sm);
+}
+
+.error-stack {
+  font-family: var(--font-mono);
+  font-size: var(--fs-caption);
+  color: var(--color-ink-muted);
+  background: var(--color-surface);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .error-container {
+    padding: var(--space-lg);
+    margin: var(--space-sm);
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-retry-btn,
+  .error-home-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
