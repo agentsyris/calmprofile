@@ -6,6 +6,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import IntroSection from "./components/IntroSection";
+import HeroCard from "./components/HeroCard";
+import GlassDemo from "./components/GlassDemo";
 import Assessment from "./components/Assessment";
 import AssessmentContext from "./components/AssessmentContext";
 import Results from "./components/Results";
@@ -61,7 +63,9 @@ function App() {
     <ErrorBoundary>
       <Router>
         <Routes>
-          <Route path="/" element={<IntroSection />} />
+          <Route path="/" element={<HeroCard />} />
+          <Route path="/original" element={<IntroSection />} />
+          <Route path="/demo" element={<GlassDemo />} />
 
           <Route
             path="/assessment"

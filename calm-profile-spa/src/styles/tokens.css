@@ -24,25 +24,30 @@
   --container-pad-mobile: 16px;
 
   /* spacing scale (px) -> rem based on 16px root */
-  --space-4: 0.25rem;   /* 4px */
-  --space-8: 0.5rem;    /* 8px */
-  --space-12: 0.75rem;  /* 12px */
-  --space-16: 1rem;     /* 16px */
-  --space-24: 1.5rem;   /* 24px */
-  --space-32: 2rem;     /* 32px */
-  --space-48: 3rem;     /* 48px */
+  --space-4: 0.25rem; /* 4px */
+  --space-8: 0.5rem; /* 8px */
+  --space-12: 0.75rem; /* 12px */
+  --space-16: 1rem; /* 16px */
+  --space-24: 1.5rem; /* 24px */
+  --space-32: 2rem; /* 32px */
+  --space-48: 3rem; /* 48px */
 
   /* radii */
   --radius-card: 8px;
   --radius-button: 10px;
 
   /* shadows (subtle only) */
-  --shadow-1: 0 1px 2px rgba(var(--color-ink-rgb), 0.06), 0 1px 1px rgba(var(--color-ink-rgb), 0.04);
-  --shadow-2: 0 6px 18px rgba(var(--color-ink-rgb), 0.08), 0 2px 6px rgba(var(--color-ink-rgb), 0.05);
+  --shadow-1: 0 1px 2px rgba(var(--color-ink-rgb), 0.06),
+    0 1px 1px rgba(var(--color-ink-rgb), 0.04);
+  --shadow-2: 0 6px 18px rgba(var(--color-ink-rgb), 0.08),
+    0 2px 6px rgba(var(--color-ink-rgb), 0.05);
 
   /* typography (inter ui + jetbrains mono chrome) */
-  --font-ui: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-ui: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
 
   /* type scale */
   --fs-h1: 1.75rem; /* 28px */
@@ -68,4 +73,24 @@
   /* component-specific tokens */
   --progress-height: 4px;
   --focus-ring: 0 0 0 2px rgba(var(--color-teal-rgb), 0.45);
+
+  /* glass ui tokens */
+  --glass-bg-rgb: 255, 255, 255;
+  --glass-border-rgb: 0, 201, 167;
+
+  /* glass level 1 (subtle) */
+  --glass-1-bg-alpha: 0.06;
+  --glass-1-border-alpha: 0.08;
+  --glass-1-blur: 16px;
+  --glass-1-saturation: 1.1;
+
+  /* glass level 2 (prominent) */
+  --glass-2-bg-alpha: 0.08;
+  --glass-2-border-alpha: 0.12;
+  --glass-2-blur: 24px;
+  --glass-2-saturation: 1.15;
+
+  /* glass fallback (no backdrop-filter support) */
+  --glass-fallback-bg-alpha: 0.95;
+  --glass-fallback-border-alpha: 0.25;
 }
