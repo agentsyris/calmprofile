@@ -1,0 +1,9 @@
+// This is an example file.
+// It has multiple lines.
+// Each line should be preserved.
+
+// Another line of text.
+// And another one.
+
+// The file content should be preserved.
+// Without any changes.
