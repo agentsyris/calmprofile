@@ -1,5 +1,8 @@
-node_modules/
-dist/
-.env
-.DS_Store
-.aider*
+.env.example
+.vercel/
+instance/
+*.zip
+vercel.json
+calm_profile_api/.venv/
+__pycache__/
+*.pyc
