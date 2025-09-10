@@ -1,5 +1,15 @@
 /* LandingV2.css - Isolated styles for LandingV2 component */
 
+/* Headlines - Inter */
+h1, h2, .headline {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Everything else - JetBrains Mono */
+body, p, label, input, .stats, .method-step {
+  font-family: 'JetBrains Mono', monospace;
+}
+
 /* LandingV2 specific styles - scoped to .landing-v2-container */
 .landing-v2-container {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
