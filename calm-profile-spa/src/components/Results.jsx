@@ -114,31 +114,41 @@ const Results = ({ result, onReset }) => {
         </ul>
       </div>
 
-      {/* email capture for full report */}
-      <div className="email-capture">
-        <h3 className="email-capture-title">
-          get your complete calm.profile report
+      {/* strategy session capture */}
+      <div className="strategy-session">
+        <h3 className="strategy-title">
+          next step: strategy session
         </h3>
-        <p className="email-capture-subtitle">
-          personalized tool stack · integration playbook · roi calculator
+        <p className="strategy-description">
+          based on your <strong>{result.archetype.primary.toLowerCase()}</strong> profile, we'll explore:
         </p>
+        <ul className="strategy-list">
+          <li>whether calm.stack could address your friction points</li>
+          <li>expected timeline and investment</li>
+          <li>specific improvements for your team</li>
+        </ul>
 
-        <div className="email-form">
+        <div className="strategy-form">
           <input
             type="email"
-            className="email-input"
+            className="strategy-email-input"
             placeholder="your@email.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <button
-            className="email-submit"
+            className="strategy-submit"
             onClick={handleGetReport}
             disabled={!email || loading}
           >
-            {loading ? "processing..." : "get report - $495"}
+            {loading ? "scheduling..." : "schedule your strategy call - $495"}
           </button>
         </div>
+        
+        <p className="no-obligation-note">
+          not ready for calm.stack? no problem.<br/>
+          the insights are yours to keep.
+        </p>
       </div>
 
       <div className="meta-info">assessment id: {result.assessment_id}</div>

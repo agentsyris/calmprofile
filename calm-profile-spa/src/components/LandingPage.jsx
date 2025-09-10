@@ -115,16 +115,16 @@ const LandingPage = () => {
           context switching. tool sprawl. meeting creep. decision loops.
         </h2>
         <p className="hero-solution-text">
-          calm.profile maps your exact friction points—and the fix.
+          start your calm.sys journey with a strategic assessment.
         </p>
         <button
           className="hero-cta-button"
           onClick={handleCTAClick}
-          aria-label="Take the assessment"
+          aria-label="Apply to work with syrıs"
         >
-          begin assessment
+          apply to work with syrıs
         </button>
-        <p className="hero-small-text">12 minutes. 24 questions.</p>
+        <p className="hero-small-text">step 1: calm.profile assessment + strategy session ($495)</p>
       </section>
 
       {/* 2. Single Stats Line */}
@@ -136,7 +136,7 @@ const LandingPage = () => {
         className="stats-section"
       >
         <div className="stats-single-line">
-          8 hrs/week · 34% overhead cut · $2,400/month recovered
+          step 2: calm.stack implementation sprint ($2,950+) • step 3: calm.os transformation (by application)
         </div>
       </section>
 
@@ -148,24 +148,35 @@ const LandingPage = () => {
         id="process"
         className="process-section"
       >
-        <h3 className="process-title">the method</h3>
+        <h3 className="process-title">your calm.sys journey</h3>
         <div className="process-steps">
           <div className="process-step">
             <div className="step-number">1</div>
-            <div className="step-text">baseline assessment (12 min)</div>
+            <div className="step-text">qualify with calm.profile ($495)<br/>strategic assessment • workstyle analysis • 30-min strategy session</div>
           </div>
           <div className="process-step">
             <div className="step-number">2</div>
-            <div className="step-text">friction map delivered immediately</div>
+            <div className="step-text">implement with calm.stack ($2,950)<br/>2-week sprint • immediate fixes • credit $495 toward cost</div>
           </div>
           <div className="process-step">
             <div className="step-number">3</div>
-            <div className="step-text">implementation blueprint ($495)</div>
+            <div className="step-text">transform with calm.os ($15k+)<br/>full operational overhaul • 3-month engagement • enterprise-wide impact</div>
           </div>
-          <div className="process-step">
-            <div className="step-number">4</div>
-            <div className="step-text">30-min architect call included</div>
-          </div>
+        </div>
+      </section>
+
+      {/* 3.5. Qualifier Section */}
+      <section className="qualifier-section">
+        <h3 className="qualifier-title">is syrıs right for you?</h3>
+        <div className="qualifier-content">
+          <p className="qualifier-intro">we work with creative teams who:</p>
+          <ul className="qualifier-list">
+            <li>have 5-50 employees</li>
+            <li>lose 10+ hours/week to operational chaos</li>
+            <li>are ready to invest in systematic change</li>
+            <li>value expertise over tools</li>
+          </ul>
+          <p className="qualifier-note">calm.profile helps us determine mutual fit.</p>
         </div>
       </section>
 
@@ -177,67 +188,25 @@ const LandingPage = () => {
         id="calculator"
         className="calculator-section"
       >
-        <h3 className="calculator-title">your annual friction cost</h3>
-        <div className="calculator-inputs">
-          <div className="input-group">
-            <label className="input-label" htmlFor="team-size">
-              team size
-            </label>
-            <input
-              id="team-size"
-              type="number"
-              value={teamSize}
-              onChange={(e) => setTeamSize(parseInt(e.target.value) || 0)}
-              min="1"
-              max="50"
-              className="input-field"
-              aria-label="Team size"
-            />
+        <h3 className="calculator-title">investment structure</h3>
+        <div className="investment-structure">
+          <div className="investment-item">
+            <div className="investment-name">calm.profile</div>
+            <div className="investment-price">$495</div>
+            <div className="investment-note">(credited toward calm.stack)</div>
           </div>
-          <div className="input-group">
-            <label className="input-label" htmlFor="hours-lost">
-              weekly hours
-            </label>
-            <input
-              id="hours-lost"
-              type="number"
-              value={hoursLost}
-              onChange={(e) => setHoursLost(parseInt(e.target.value) || 0)}
-              min="1"
-              max="40"
-              className="input-field"
-              aria-label="Hours lost per week"
-            />
+          <div className="investment-item">
+            <div className="investment-name">calm.stack</div>
+            <div className="investment-price">$2,950</div>
+            <div className="investment-note">(includes profile credit)</div>
           </div>
-          <div className="input-group">
-            <label className="input-label" htmlFor="hourly-rate">
-              hourly rate
-            </label>
-            <input
-              id="hourly-rate"
-              type="number"
-              value={hourlyRate}
-              onChange={(e) => setHourlyRate(parseInt(e.target.value) || 0)}
-              min="20"
-              max="200"
-              className="input-field"
-              aria-label="Hourly rate in dollars"
-            />
+          <div className="investment-item">
+            <div className="investment-name">calm.os</div>
+            <div className="investment-price">custom pricing</div>
+            <div className="investment-note">(by application)</div>
           </div>
         </div>
-        <button className="calculate-button" onClick={handleCalculate}>
-          calculate
-        </button>
-        {showCalculation && (
-          <div className="calculation-result">
-            <div className="calculation-formula">
-              {teamSize} × {hoursLost} × ${hourlyRate} × 52 weeks =
-            </div>
-            <div className="total-cost">
-              ${calculateCost().toLocaleString()}/year in lost productivity
-            </div>
-          </div>
-        )}
+        <p className="investment-cta">start with calm.profile to explore working together.</p>
       </section>
 
       {/* 5. Sample Report Link and Guarantee */}
@@ -249,10 +218,9 @@ const LandingPage = () => {
         className="cta-section"
       >
         <a href="/sample-report" className="sample-report-link">
-          view sample report
+          see how we analyze operations
         </a>
-
-        <p className="guarantee-text">full refund if roi &lt; 5x in 90 days.</p>
+        <p className="sample-note">(this is step 1 of 3 in the calm.sys methodology)</p>
       </section>
 
       {/* Sticky CTA */}
@@ -260,9 +228,9 @@ const LandingPage = () => {
         <button
           className="sticky-button"
           onClick={handleCTAClick}
-          aria-label="Start free assessment"
+          aria-label="Apply to work with syrıs"
         >
-          begin assessment
+          apply to work with syrıs
         </button>
       </div>
     </div>

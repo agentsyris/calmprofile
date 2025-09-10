@@ -363,3 +363,156 @@
     width: 100%;
   }
 }
+
+/* Strategy Session Section */
+.strategy-session {
+  background: #ffffff;
+  padding: 40px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(10, 10, 10, 0.05),
+    0 1px 3px rgba(10, 10, 10, 0.03);
+  border-left: 3px solid #00c9a7;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategy-session::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 201, 167, 0.3),
+    transparent
+  );
+}
+
+.strategy-session:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(10, 10, 10, 0.08),
+    0 2px 8px rgba(10, 10, 10, 0.05);
+}
+
+.strategy-title {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0a0a0a;
+  margin: 0 0 16px 0;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.strategy-description {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: #404040;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.strategy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.strategy-list li {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: #404040;
+  padding: 6px 0;
+  text-transform: lowercase;
+  position: relative;
+  padding-left: 20px;
+}
+
+.strategy-list li::before {
+  content: "•";
+  color: #00c9a7;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.strategy-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.strategy-email-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  border: 2px solid rgba(0, 201, 167, 0.2);
+  border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  background: rgba(0, 201, 167, 0.02);
+  transition: all 0.3s ease;
+}
+
+.strategy-email-input:focus {
+  outline: none;
+  border-color: #00c9a7;
+  background: rgba(0, 201, 167, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+}
+
+.strategy-submit {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #00c9a7 0%, #00a88a 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: lowercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 201, 167, 0.3);
+}
+
+.strategy-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 201, 167, 0.4);
+}
+
+.strategy-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.no-obligation-note {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: #666666;
+  text-transform: lowercase;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+/* Mobile responsiveness for strategy section */
+@media (max-width: 768px) {
+  .strategy-form {
+    flex-direction: column;
+  }
+  
+  .strategy-email-input {
+    min-width: auto;
+  }
+  
+  .strategy-submit {
+    width: 100%;
+  }
+}
