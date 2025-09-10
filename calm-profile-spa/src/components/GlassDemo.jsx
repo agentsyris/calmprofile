@@ -1,6 +1,5 @@
 import React from "react";
 import Surface from "./Surface";
-import "../styles/hero-card.css";
 
 const GlassDemo = () => {
   return (
