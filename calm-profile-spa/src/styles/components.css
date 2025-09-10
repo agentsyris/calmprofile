@@ -166,6 +166,12 @@
   font-weight: 500;
 }
 
+.answer-button:active {
+  transform: translateX(2px);
+  border-color: var(--syris-teal-dark);
+  background: var(--syris-teal-muted);
+}
+
 .answer-label {
   font-family: var(--font-mono);
   font-weight: 500;
@@ -215,6 +221,12 @@
 .nav-button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.nav-button:disabled:hover {
+  transform: none;
+  background: transparent;
+  border-color: var(--gray-200);
 }
 
 .nav-status {
@@ -304,6 +316,26 @@
   }
 }
 
+/* Improved loading spinner animation */
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--gray-200);
+  border-top: 2px solid var(--syris-teal);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Context form styles */
 .context-container {
   max-width: 600px;
@@ -353,6 +385,14 @@
   background: var(--syris-teal-pale);
 }
 
+/* Enhanced form focus states */
+.form-select:focus,
+.email-input:focus {
+  outline: 2px solid var(--syris-teal);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 1px var(--white);
+}
+
 .submit-button {
   width: 100%;
   padding: var(--space-md);
@@ -375,4 +415,9 @@
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+
+.submit-button:disabled:hover {
+  transform: none;
+  background: var(--syris-teal);
 }

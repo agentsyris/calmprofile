@@ -2,18 +2,25 @@
    note: do not hard-code hex values anywhere else in the project. consume via these vars. */
 
 :root {
-  /* colors */
-  --color-ink: #111111;
-  --color-gray-100: #f5f5f5;
-  --color-gray-200: #eeeeee;
-  --color-gray-300: #e0e0e0;
-  --color-gray-400: #bdbdbd;
-  --color-surface: #ffffff;
-  --color-page: #fafafa;
+  /* colors - unified with syris-site */
+  --color-ink: #0a0a0a;
+  --color-gray-50: #f2f2f2;
+  --color-gray-100: #e5e5e5;
+  --color-gray-200: #cccccc;
+  --color-gray-300: #999999;
+  --color-gray-400: #999999;
+  --color-gray-500: #666666;
+  --color-gray-600: #666666;
+  --color-gray-700: #333333;
+  --color-gray-800: #1a1a1a;
+  --color-gray-900: #1a1a1a;
+  --color-white: #ffffff;
   --color-teal: #00c9a7;
+  --color-surface: var(--color-white);
+  --color-page: var(--color-gray-50);
 
   /* rgb helpers (for translucent rings/shadows) */
-  --color-ink-rgb: 17, 17, 17;
+  --color-ink-rgb: 10, 10, 10;
   --color-teal-rgb: 0, 201, 167;
 
   /* layout */
@@ -23,14 +30,20 @@
   --container-pad-tablet: 20px;
   --container-pad-mobile: 16px;
 
-  /* spacing scale (px) -> rem based on 16px root */
-  --space-4: 0.25rem; /* 4px */
-  --space-8: 0.5rem; /* 8px */
-  --space-12: 0.75rem; /* 12px */
-  --space-16: 1rem; /* 16px */
-  --space-24: 1.5rem; /* 24px */
-  --space-32: 2rem; /* 32px */
-  --space-48: 3rem; /* 48px */
+  /* spacing scale - unified with syris-site */
+  --space-1: 0.5rem; /* 8px */
+  --space-2: 1rem; /* 16px */
+  --space-3: 1.5rem; /* 24px */
+  --space-4: 2rem; /* 32px */
+  --space-6: 3rem; /* 48px */
+  --space-8: 4rem; /* 64px */
+  --space-12: 6rem; /* 96px */
+  --space-16: 8rem; /* 128px */
+  --space-20: calc(var(--space-16) + var(--space-4));
+  --space-24: calc(var(--space-16) + var(--space-8));
+  --space-32: calc(var(--space-16) * 2);
+  --space-40: calc(var(--space-16) * 2 + var(--space-8));
+  --space-48: calc(var(--space-16) * 3);
 
   /* radii */
   --radius-card: 8px;

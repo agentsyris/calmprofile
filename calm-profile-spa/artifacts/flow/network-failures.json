@@ -1,0 +1,5 @@
+[
+  {
+    "error": "failed to capture network errors: 'str' object has no attribute 'get'"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "archetype": {
+    "confidence": 65.0,
+    "mix": {
+      "architect": 24.5,
+      "conductor": 30.9,
+      "craftsperson": 24.5,
+      "curator": 20.2
+    },
+    "primary": "conductor",
+    "tagline": "orchestrators of collaborative excellence"
+  },
+  "assessment_id": 3,
+  "metrics": {
+    "annual_cost": 70720,
+    "hours_lost_ppw": 3.4
+  },
+  "recommendations": {
+    "quick_wins": [
+      "Reduce status meetings with async updates",
+      "Define decision owners",
+      "Weekly cadence dashboard"
+    ],
+    "strengths": [
+      "Team coordination",
+      "Meeting facilitation",
+      "Stakeholder alignment",
+      "Resource orchestration"
+    ]
+  },
+  "scores": {
+    "axes": {
+      "collaboration": 100,
+      "scope": 100,
+      "structure": 100,
+      "tempo": 100
+    },
+    "overhead_index": 68
+  },
+  "success": true,
+  "tagline": "orchestrators of collaborative excellence"
+}

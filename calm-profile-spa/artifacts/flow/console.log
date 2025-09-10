@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": 1757465182250,
+    "level": "DEBUG",
+    "message": "http://localhost:3000/@vite/client 494:8 \"[vite] connecting...\""
+  },
+  {
+    "timestamp": 1757465182257,
+    "level": "DEBUG",
+    "message": "http://localhost:3000/@vite/client 613:14 \"[vite] connected.\""
+  },
+  {
+    "timestamp": 1757465182276,
+    "level": "INFO",
+    "message": "http://localhost:3000/node_modules/.vite/deps/chunk-PJEEZAML.js?v=a7a11c63 21550:24 \"%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools\" \"font-weight:bold\""
+  }
+]

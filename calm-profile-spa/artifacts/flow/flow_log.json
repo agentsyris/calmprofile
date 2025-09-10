@@ -1,0 +1,39 @@
+[
+  {
+    "step": "load_spa",
+    "url": "http://localhost:3000",
+    "status": "success"
+  },
+  {
+    "step": "navigate_assessment",
+    "status": "success"
+  },
+  {
+    "step": "complete_questions",
+    "status": "success"
+  },
+  {
+    "step": "submit_assessment",
+    "status": "failed",
+    "error": "timeout"
+  },
+  {
+    "step": "submit_context",
+    "status": "failed",
+    "error": "Message: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//select[@name='team_size'] | //select[contains(@class, 'team-size')]\"}\n  (Session info: chrome=140.0.7339.82); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception\nStacktrace:\n0   chromedriver                        0x0000000102da7674 cxxbridge1$str$ptr + 2882776\n1   chromedriver                        0x0000000102d9f5a0 cxxbridge1$str$ptr + 2849796\n2   chromedriver                        0x00000001028c90dc _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73436\n3   chromedriver                        0x0000000102910474 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 365172\n4   chromedriver                        0x000000010295166c _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 631916\n5   chromedriver                        0x0000000102904130 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315184\n6   chromedriver                        0x0000000102d6bba4 cxxbridge1$str$ptr + 2638344\n7   chromedriver                        0x0000000102d6edbc cxxbridge1$str$ptr + 2651168\n8   chromedriver                        0x0000000102d4c640 cxxbridge1$str$ptr + 2509988\n9   chromedriver                        0x0000000102d6f668 cxxbridge1$str$ptr + 2653388\n10  chromedriver                        0x0000000102d3dddc cxxbridge1$str$ptr + 2450496\n11  chromedriver                        0x0000000102d8eef0 cxxbridge1$str$ptr + 2782548\n12  chromedriver                        0x0000000102d8f070 cxxbridge1$str$ptr + 2782932\n13  chromedriver                        0x0000000102d9f1ec cxxbridge1$str$ptr + 2848848\n14  libsystem_pthread.dylib             0x000000018726bc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x0000000187266b80 thread_start + 8\n"
+  },
+  {
+    "step": "view_results",
+    "status": "success"
+  },
+  {
+    "step": "submit_email",
+    "status": "failed",
+    "error": "Message: \nStacktrace:\n0   chromedriver                        0x0000000102da7674 cxxbridge1$str$ptr + 2882776\n1   chromedriver                        0x0000000102d9f5a0 cxxbridge1$str$ptr + 2849796\n2   chromedriver                        0x00000001028c90dc _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73436\n3   chromedriver                        0x0000000102910474 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 365172\n4   chromedriver                        0x000000010295166c _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 631916\n5   chromedriver                        0x0000000102904130 _RNvCslE4myv9Sbr3_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 315184\n6   chromedriver                        0x0000000102d6bba4 cxxbridge1$str$ptr + 2638344\n7   chromedriver                        0x0000000102d6edbc cxxbridge1$str$ptr + 2651168\n8   chromedriver                        0x0000000102d4c640 cxxbridge1$str$ptr + 2509988\n9   chromedriver                        0x0000000102d6f668 cxxbridge1$str$ptr + 2653388\n10  chromedriver                        0x0000000102d3dddc cxxbridge1$str$ptr + 2450496\n11  chromedriver                        0x0000000102d8eef0 cxxbridge1$str$ptr + 2782548\n12  chromedriver                        0x0000000102d8f070 cxxbridge1$str$ptr + 2782932\n13  chromedriver                        0x0000000102d9f1ec cxxbridge1$str$ptr + 2848848\n14  libsystem_pthread.dylib             0x000000018726bc0c _pthread_start + 136\n15  libsystem_pthread.dylib             0x0000000187266b80 thread_start + 8\n"
+  },
+  {
+    "step": "checkout",
+    "status": "skipped",
+    "reason": "no checkout element found"
+  }
+]

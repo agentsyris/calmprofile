@@ -103,6 +103,7 @@ const LandingPage = () => {
         <span className="header-text">calm</span>
         <span className="header-dot">.</span>
         <span className="header-text">profile</span>
+        <div className="header-tagline">operational friction diagnostic</div>
       </div>
 
       {/* 1. Hero Section */}
