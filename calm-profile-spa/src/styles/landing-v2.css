@@ -1,0 +1,390 @@
+/* LandingV2.css - Isolated styles for LandingV2 component */
+
+/* LandingV2 specific styles - scoped to .landing-v2-container */
+.landing-v2-container {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: clamp(600px, 80vw, 1000px);
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 40px);
+  background-color: #fafafa;
+  min-height: 100vh;
+  overflow: visible;
+  box-sizing: border-box;
+  isolation: isolate;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-v2-container .hero-section {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 32px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-v2-container .hero-headline {
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.landing-v2-container .hero-subhead {
+  font-size: clamp(16px, 3.5vw, 18px);
+  font-weight: 400;
+  color: #666;
+  margin: 0 0 24px 0;
+  line-height: 1.4;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .hero-solution-text {
+  font-size: clamp(16px, 3.5vw, 18px);
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 32px 0;
+  line-height: 1.4;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .hero-cta-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 16px 32px;
+  background-color: #00c9a7;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: clamp(16px, 3.5vw, 18px);
+  font-weight: 600;
+  margin: 0 auto 16px auto;
+  text-transform: lowercase;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.landing-v2-container .hero-cta-button:hover {
+  background-color: #00b89a;
+  transform: translateY(-2px);
+}
+
+.landing-v2-container .hero-small-text {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: #666;
+  margin: 0;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-v2-container .stat-card {
+  padding: 20px 16px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-v2-container .stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.landing-v2-container .stat-number {
+  font-size: clamp(20px, 4vw, 24px);
+  font-weight: 600;
+  color: #00c9a7;
+  margin-bottom: 8px;
+}
+
+.landing-v2-container .stat-text {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: #666;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.landing-v2-container .process-section {
+  margin-bottom: 60px;
+  padding: 24px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-v2-container .process-title {
+  font-size: clamp(18px, 4vw, 20px);
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.landing-v2-container .process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background-color: #f8fffe;
+  border-radius: 6px;
+  border: 1px solid #00c9a7;
+  box-sizing: border-box;
+}
+
+.landing-v2-container .step-number {
+  font-size: 14px;
+  font-weight: 600;
+  color: #00c9a7;
+  background-color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00c9a7;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+.landing-v2-container .step-text {
+  font-size: clamp(14px, 3vw, 16px);
+  color: #333;
+  text-transform: lowercase;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.landing-v2-container .calculator-section {
+  margin-bottom: 60px;
+  padding: 24px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #00c9a7;
+  box-shadow: 0 4px 12px rgba(0, 201, 167, 0.15);
+}
+
+.landing-v2-container .calculator-title {
+  font-size: clamp(18px, 4vw, 20px);
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .calculator-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.landing-v2-container .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.landing-v2-container .input-label {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: #666;
+  margin-bottom: 6px;
+  font-weight: 500;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.landing-v2-container .input-field {
+  width: 100%;
+  max-width: 120px;
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: clamp(14px, 3vw, 16px);
+  text-align: center;
+  background-color: white;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-v2-container .input-field:focus {
+  outline: 2px solid #00c9a7;
+  outline-offset: 2px;
+  border-color: #00c9a7;
+  box-shadow: 0 0 0 3px rgba(0, 201, 167, 0.1);
+}
+
+.landing-v2-container .input-field:hover {
+  border-color: #00c9a7;
+}
+
+.landing-v2-container .calculation-result {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0fdfa;
+  border-radius: 8px;
+  border: 1px solid #00c9a7;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 201, 167, 0.1);
+}
+
+.landing-v2-container .calculation-result.pulse {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 201, 167, 0.2);
+}
+
+.landing-v2-container .calculation-formula {
+  font-size: clamp(14px, 3vw, 16px);
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: lowercase;
+  word-wrap: break-word;
+}
+
+.landing-v2-container .total-cost {
+  font-size: clamp(20px, 4vw, 28px);
+  color: #00c9a7;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.landing-v2-container .cta-section {
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-v2-container .sample-report-link {
+  display: block;
+  text-align: center;
+  margin: 16px auto 0 auto;
+  color: #00c9a7;
+  text-decoration: none;
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.landing-v2-container .sample-report-link:hover {
+  color: #00b89a;
+}
+
+.landing-v2-container .guarantee-text {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: #666;
+  text-align: center;
+  margin: 16px auto 0 auto;
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.landing-v2-container .sticky-cta {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.landing-v2-container .sticky-cta.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+
+.landing-v2-container .sticky-button {
+  padding: 12px 24px;
+  background-color: #00c9a7;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: lowercase;
+  box-shadow: 0 4px 12px rgba(0, 201, 167, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.landing-v2-container .sticky-button:hover {
+  background-color: #00b89a;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .landing-v2-container {
+    padding: 20px;
+  }
+
+  .landing-v2-container .hero-section {
+    padding: 24px 16px;
+  }
+
+  .landing-v2-container .process-section,
+  .landing-v2-container .calculator-section {
+    padding: 20px 16px;
+  }
+
+  .landing-v2-container .calculator-inputs {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .landing-v2-container .stats-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

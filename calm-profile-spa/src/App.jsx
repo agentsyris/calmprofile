@@ -6,6 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import IntroSection from "./components/IntroSection";
+import LandingPage from "./components/LandingPage";
 import HeroCard from "./components/HeroCard";
 import GlassDemo from "./components/GlassDemo";
 import Assessment from "./components/Assessment";
@@ -63,7 +64,8 @@ function App() {
     <ErrorBoundary>
       <Router>
         <Routes>
-          <Route path="/" element={<HeroCard />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/hero" element={<HeroCard />} />
           <Route path="/original" element={<IntroSection />} />
           <Route path="/demo" element={<GlassDemo />} />
 
