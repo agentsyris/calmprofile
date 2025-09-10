@@ -248,7 +248,7 @@ const LandingPage = () => {
         id="cta"
         className="cta-section"
       >
-        <a href="#sample-report" className="sample-report-link">
+        <a href="/sample-report" className="sample-report-link">
           view sample report
         </a>
 

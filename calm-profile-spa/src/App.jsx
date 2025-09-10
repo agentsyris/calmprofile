@@ -12,6 +12,7 @@ import Assessment from "./components/Assessment";
 import AssessmentContext from "./components/AssessmentContext";
 import Results from "./components/Results";
 import ThankYou from "./components/ThankYou";
+import SampleReport from "./components/SampleReport";
 import ErrorBoundary from "./components/ErrorBoundary";
 import "./styles/error-boundary.css";
 
@@ -64,6 +65,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/sample-report" element={<SampleReport />} />
           <Route path="/original" element={<IntroSection />} />
           <Route path="/demo" element={<GlassDemo />} />
 
