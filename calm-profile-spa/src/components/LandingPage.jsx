@@ -22,7 +22,7 @@ const LandingPage = () => {
   const [visibleSections, setVisibleSections] = useState(
     new Set(["hero", "stats", "process", "calculator", "cta"])
   );
-  const [pulseAnimation, setPulseAnimation] = useState(false);
+  const [showCalculation, setShowCalculation] = useState(false);
 
   const heroRef = useRef(null);
   const sectionRefs = useRef({});
@@ -36,12 +36,10 @@ const LandingPage = () => {
     return teamSize * hoursLost * hourlyRate * 52;
   };
 
-  // Pulse animation when calculator updates
-  useEffect(() => {
-    setPulseAnimation(true);
-    const timer = setTimeout(() => setPulseAnimation(false), 600);
-    return () => clearTimeout(timer);
-  }, [teamSize, hoursLost, hourlyRate]);
+  // Handle calculate button click
+  const handleCalculate = () => {
+    setShowCalculation(true);
+  };
 
   // Scroll animations and sticky CTA
   useEffect(() => {
@@ -116,9 +114,9 @@ const LandingPage = () => {
           onClick={handleCTAClick}
           aria-label="Take the assessment"
         >
-          take the assessment
+          begin assessment
         </button>
-        <p className="hero-small-text">12 minutes. 24 questions. zero fluff.</p>
+        <p className="hero-small-text">12 minutes. 24 questions.</p>
       </section>
 
       {/* 2. Single Stats Line */}
@@ -130,7 +128,7 @@ const LandingPage = () => {
         className="stats-section"
       >
         <div className="stats-single-line">
-          founders save: 8 hrs/week · 34% overhead cut · $2,400/month recovered
+          8 hrs/week · 34% overhead cut · $2,400/month recovered
         </div>
       </section>
 
@@ -146,27 +144,19 @@ const LandingPage = () => {
         <div className="process-steps">
           <div className="process-step">
             <div className="step-number">1</div>
-            <div className="step-text">
-              baseline assessment (12 min)
-            </div>
+            <div className="step-text">baseline assessment (12 min)</div>
           </div>
           <div className="process-step">
             <div className="step-number">2</div>
-            <div className="step-text">
-              friction map delivered instantly
-            </div>
+            <div className="step-text">friction map delivered immediately</div>
           </div>
           <div className="process-step">
             <div className="step-number">3</div>
-            <div className="step-text">
-              implementation blueprint ($495)
-            </div>
+            <div className="step-text">implementation blueprint ($495)</div>
           </div>
           <div className="process-step">
             <div className="step-number">4</div>
-            <div className="step-text">
-              30-min architect call included
-            </div>
+            <div className="step-text">30-min architect call included</div>
           </div>
         </div>
       </section>
@@ -198,7 +188,7 @@ const LandingPage = () => {
           </div>
           <div className="input-group">
             <label className="input-label" htmlFor="hours-lost">
-              hours lost
+              weekly hours
             </label>
             <input
               id="hours-lost"
@@ -227,14 +217,19 @@ const LandingPage = () => {
             />
           </div>
         </div>
-        <div className={`calculation-result ${pulseAnimation ? "pulse" : ""}`}>
-          <div className="calculation-formula">
-            {teamSize} × {hoursLost} × ${hourlyRate} × 52 weeks =
+        <button className="calculate-button" onClick={handleCalculate}>
+          calculate
+        </button>
+        {showCalculation && (
+          <div className="calculation-result">
+            <div className="calculation-formula">
+              {teamSize} × {hoursLost} × ${hourlyRate} × 52 weeks =
+            </div>
+            <div className="total-cost">
+              ${calculateCost().toLocaleString()}/year in lost productivity
+            </div>
           </div>
-          <div className="total-cost">
-            ${calculateCost().toLocaleString()}/year in lost productivity
-          </div>
-        </div>
+        )}
       </section>
 
       {/* 5. Sample Report Link and Guarantee */}
@@ -246,11 +241,11 @@ const LandingPage = () => {
         className="cta-section"
       >
         <a href="#sample-report" className="sample-report-link">
-          see sample report
+          view sample report
         </a>
 
         <p className="guarantee-text">
-          full refund if roi &lt; 5x in 90 days. no questions.
+          full refund if roi &lt; 5x in 90 days.
         </p>
       </section>
 
@@ -261,7 +256,7 @@ const LandingPage = () => {
           onClick={handleCTAClick}
           aria-label="Start free assessment"
         >
-          start free assessment
+          begin assessment
         </button>
       </div>
     </div>
