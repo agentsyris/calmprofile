@@ -1,13 +1,45 @@
 /* LandingV2.css - Isolated styles for LandingV2 component */
 
 /* Headlines - Inter */
-h1, h2, .headline {
-  font-family: 'Inter', sans-serif;
+h1,
+h2,
+.headline {
+  font-family: "Inter", sans-serif;
 }
 
 /* Everything else - JetBrains Mono */
-body, p, label, input, .stats, .method-step {
-  font-family: 'JetBrains Mono', monospace;
+body,
+p,
+label,
+input,
+.stats,
+.method-step,
+.hero-small-text,
+.hero-solution-text,
+.stats-single-line,
+.step-text,
+.input-label,
+.guarantee-text,
+.sample-report-link {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Header Section */
+.header-mark {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 120px;
+  text-align: left;
+}
+
+.header-text {
+  color: #666;
+}
+
+.header-dot {
+  color: #00c9a7;
+  font-weight: 600;
 }
 
 /* LandingV2 specific styles - scoped to .landing-v2-container */
@@ -178,15 +210,15 @@ body, p, label, input, .stats, .method-step {
 .landing-v2-container .step-number {
   font-size: 14px;
   font-weight: 600;
-  color: #00c9a7;
-  background-color: white;
+  color: #666;
+  background-color: #f5f5f5;
   border-radius: 50%;
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #00c9a7;
+  border: 2px solid #f5f5f5;
   flex-shrink: 0;
   min-width: 28px;
 }

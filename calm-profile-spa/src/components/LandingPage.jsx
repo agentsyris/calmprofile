@@ -98,6 +98,13 @@ const LandingPage = () => {
 
   return (
     <div className="landing-v2-container">
+      {/* Header Section */}
+      <div className="header-mark">
+        <span className="header-text">calm</span>
+        <span className="header-dot">.</span>
+        <span className="header-text">profile</span>
+      </div>
+
       {/* 1. Hero Section */}
       <section ref={heroRef} id="hero" className="hero-section">
         <h1 className="hero-headline">
@@ -244,9 +251,7 @@ const LandingPage = () => {
           view sample report
         </a>
 
-        <p className="guarantee-text">
-          full refund if roi &lt; 5x in 90 days.
-        </p>
+        <p className="guarantee-text">full refund if roi &lt; 5x in 90 days.</p>
       </section>
 
       {/* Sticky CTA */}
