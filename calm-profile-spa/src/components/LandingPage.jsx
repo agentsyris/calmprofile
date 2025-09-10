@@ -250,7 +250,7 @@ const LandingPage = () => {
         </a>
 
         <p className="guarantee-text">
-          full refund if roi < 5x in 90 days. no questions.
+          full refund if roi &lt; 5x in 90 days. no questions.
         </p>
       </section>
 
